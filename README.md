@@ -13,11 +13,11 @@
 
 ## clone project
 
-open cmd on file to download the project in it then whrite those command lines.
+open cmd on file to download the project in it then write this command line.
 
 if you didn't download the project you will need this command.
 
-- git clone https://github.com/ahmedsalah674/crm_project_research.git .
+- git clone https://github.com/ahmedsalah674/crm_project_research.git 
 
 then you will countinue .
 

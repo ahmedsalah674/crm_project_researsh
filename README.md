@@ -42,6 +42,8 @@ if you orready download it from the link or you used first way you will open cmd
 - php artisan serve
 
 now project is ready but please note that you cann't rejester  you will use this admin account to create a new users(admins,employees,customer) .
+
 username:admin@admin.com .
+
 password:123456789 .
 

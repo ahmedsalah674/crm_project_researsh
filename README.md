@@ -11,7 +11,7 @@
 
 - frist you will need at least laravel 7.2.
 
-## clone project
+## Clone Project
 
 open cmd on file to download the project in it then write this command line.
 
@@ -21,7 +21,7 @@ if you didn't download the project you will need this command.
 
 then you will countinue .
 
-## after clone
+## After Clone
 
 if you orready download it from the link or you used first way you will open cmd or countinue in your cmd and start from here.
 
@@ -33,7 +33,7 @@ if you orready download it from the link or you used first way you will open cmd
 
 - php artisan key:generate
 
-- now you need to open phpmyadmin and create a new database and name it ('crm')
+now you need to open phpmyadmin and create a new database and name it ('crm')
 
 - php artisan migrate
 

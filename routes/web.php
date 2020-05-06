@@ -18,5 +18,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
     return redirect(route('home'));
 });
+Route::get('/show/user/{id}','ViewusersController@show')->name('user.data');
 
 

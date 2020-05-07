@@ -18,6 +18,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', function () {
     return redirect(route('home'));
 });
-Route::get('/show/user/{id}','ViewusersController@show')->name('user.data');
 
+// "User(admin,employee,customer)" Routes
+Route::get('/show/user/{id}','ViewusersController@show')->name('user.data');
+Route::get('/user/create','viewuserscontroller@create')->name('user.create');
+Route::post('/user/create','viewuserscontroller@store')->name('user.store');
 

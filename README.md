@@ -9,23 +9,23 @@
 
 ## About project
 
-- frist you will need at least laravel 7.2.
+- Frist you will need at least laravel 7.2.
 
 ## Clone Project
 
-open cmd on file to download the project in it then write this command line.
+Open cmd on a file to download the project in it then write this command line.
 
-if you didn't download the project you will need this command.
+If you didn't download the project you will need to write this command.
 
-- git clone https://github.com/ahmedsalah674/crm_project_research.git 
+ - "git clone https://github.com/ahmedsalah674/crm_project_research.git" 
 
-then you will countinue .
+then you will countinue.
 
 ## After Clone
 
-if you orready download it from the link or you used first way you will open cmd or countinue in your cmd and start from here.
+If you already downloaded it from the link or you cloned it , you will open cmd or countinue in your cmd and start from here.
 
-- cd (the dirction of project file) for example : cd G:\New folder (2)\crm_project_researsh 
+- cd (the dirction of project file).... For example : cd G:\New folder (2)\crm_project_researsh 
 
 - composer install 
 
@@ -33,7 +33,7 @@ if you orready download it from the link or you used first way you will open cmd
 
 - php artisan key:generate
 
-now you need to open phpmyadmin and create a new database and name it ('crm')
+Now you need to open phpmyadmin and create a new database and name it ('crm_project')
 
 - php artisan migrate
 
@@ -41,7 +41,7 @@ now you need to open phpmyadmin and create a new database and name it ('crm')
 
 - php artisan serve
 
-now project is ready but please note that you cann't rejester  you will use this admin account to create a new users(admins,employees,customer) .
+Now the project is ready but please note that you cannot rejester you will use this admin account to create a new users(admins,employees,customer) .
 
 - username:admin@admin.com .
 

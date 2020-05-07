@@ -29,7 +29,11 @@ class AppServiceProvider extends ServiceProvider
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
           // $user=User::find(\Auth::user()->id);
            $event->menu->add(
-             
+            [
+                'text' => 'Home',
+                'url'  => 'home',
+                'icon' => 'fas fa-fw fa-home',
+            ],
             ['header' => 'account_settings'],
             [
                 'text' => 'Profile',

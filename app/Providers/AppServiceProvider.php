@@ -29,6 +29,7 @@ class AppServiceProvider extends ServiceProvider
         $events->listen(BuildingMenu::class, function (BuildingMenu $event) {
           // $user=User::find(\Auth::user()->id);
            $event->menu->add(
+
             [
                 'text' => 'Home',
                 'url'  => 'home',
@@ -42,8 +43,45 @@ class AppServiceProvider extends ServiceProvider
               
             ],
            
-            );
-           
-          });
+            ); //end event -> add
+            if(\Auth::check()){
+                if(\Auth::user()->role == 0)
+                {
+                  
+                  $event->menu->add('Admin');
+                  $event->menu->add(
+                   
+                    
+                    [
+                      'text' => 'Users',
+                      'icon'    => 'fas fa-fw fa-users my-2',
+                      'submenu' => 
+                      [
+                        [
+                          
+                            'text' => 'Admins',
+                            'icon' => 'fas fa-fw fa-user-circle',
+                            'url'  => route('users',0),
+                        ],
+                        [
+                          'text' => 'Employees',
+                          'icon'=>'fas fa-fw fa-user-circle',
+                          'url'  => route('users',1),
+                        ],
+                        [
+                          'text' => 'Customers',
+                          'icon'=>'fas fa-fw fa-user-circle',
+                          'url'  => route('users',2),
+                        ],
+                      ]
+                    ],
+                 
+                    
+  
+                );
+  
+                }}
+
+          }); //end event -> listen
     }
 }

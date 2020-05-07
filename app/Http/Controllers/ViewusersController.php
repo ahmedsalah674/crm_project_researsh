@@ -63,6 +63,21 @@ class ViewusersController extends Controller
             //     'user_id' => $user[0]->id,
             //   ]);
             // }
-          return redirect()->route('home')->with('message','User Added Successfully');
+            return redirect()->route('users',[$request->role,0])->with('message','User Added Successfully');
     }
+    Public function index($role)
+    {
+      if($role<3 && $role>=0){
+      if(\Auth::user()->role !=0)
+        return redirect()->with('error',"You Cann't Open This Page");
+      $users= User::where('role','=',$role)->get();
+      if(!$users)
+        abort(404);
+      else
+        return(view('admin.users',compact(['users','role'])));
+      }
+      else
+      abort(404);
+    }
+
 }

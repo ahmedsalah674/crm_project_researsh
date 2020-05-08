@@ -40,5 +40,17 @@ class ComplainController extends Controller
               'details' => $request->details,
             ]);}
         return redirect(route('home'))->with('message','Your complain Added');
-    }
+      }
+      public function index($state)
+      { //$state=$request->state;
+        if(\Auth::user()->role==0 && $state == 0)
+        {
+          $complains= Complain::where('state','=',0)->get();
+          return view('complain.all',compact('complains'));
+        }
+      
+        else
+          abort(404);
+        
+      }
 }

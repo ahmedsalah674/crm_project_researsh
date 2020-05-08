@@ -51,6 +51,12 @@ class AppServiceProvider extends ServiceProvider
                   $event->menu->add('Admin');
                   $event->menu->add(
                    
+                    [
+                        'text' => 'Add User',
+                        'icon'=>'fas fa-fw fa-user-plus my-2',
+                        'url' => route('user.create'),
+                        //'icon_color' => 'orange',
+                    ],
                     
                     [
                       'text' => 'Users',

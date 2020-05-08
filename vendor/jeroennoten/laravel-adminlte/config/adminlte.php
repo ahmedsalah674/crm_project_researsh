@@ -207,23 +207,12 @@ return [
     |
     */
     'menu' => [
-        [
-            'text' => 'search',
-            'search' => false,
-            'topnav' => true,
-        ],
+       
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        /*[
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],*/
         
         
     ],

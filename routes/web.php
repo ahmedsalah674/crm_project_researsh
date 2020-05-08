@@ -26,6 +26,10 @@ Route::post('/user/create','viewuserscontroller@store')->name('user.store');
 Route::get('/show/users/{role}','viewuserscontroller@index')->name('users');
 
 
-// profile routes
+// Profile Routes
 Route::get('/changepassword','viewuserscontroller@ChangeForm')->name('profile.change.form');
 Route::put('/ChangePassword','viewuserscontroller@ChangePassword')->name('password.change');
+
+//Complain Routes
+Route::get('/complain/create','ComplainController@create')->name('complain.create');
+Route::post('/complain/store','ComplainController@store')->name('complain.store');

@@ -49,7 +49,7 @@ class AppServiceProvider extends ServiceProvider
             ],
             ); //end event -> add
             if(\Auth::check()){
-                if(\Auth::user()->role == 0)
+                if(\Auth::user()->role == 0)//admin menu
                 {
                   
                   $event->menu->add('Admin');
@@ -59,7 +59,6 @@ class AppServiceProvider extends ServiceProvider
                         'text' => 'Add User',
                         'icon'=>'fas fa-fw fa-user-plus my-2',
                         'url' => route('user.create'),
-                        //'icon_color' => 'orange',
                     ],
                     
                     [
@@ -68,7 +67,6 @@ class AppServiceProvider extends ServiceProvider
                       'submenu' => 
                       [
                         [
-                          
                             'text' => 'Admins',
                             'icon' => 'fas fa-fw fa-user-circle',
                             'url'  => route('users',0),
@@ -85,12 +83,24 @@ class AppServiceProvider extends ServiceProvider
                         ],
                       ]
                     ],
-                 
-                    
   
                 );
   
-                }}
+                }//end admin menu
+                elseif(\Auth::user()->role == 2)
+                {
+                  $event->menu->add('customer');
+                  $event->menu->add(
+                   [
+                     'text' => 'Create Complian',  
+                     'url' => route('complain.create'),
+                     'icon'=>'fas fa-fw fa-plus',
+                   ],
+ 
+                 );
+                }//end customer menu 
+              
+              }
 
           }); //end event -> listen
     }

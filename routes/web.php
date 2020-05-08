@@ -24,3 +24,8 @@ Route::get('/show/user/{id}','ViewusersController@show')->name('user.data');
 Route::get('/user/create','viewuserscontroller@create')->name('user.create');
 Route::post('/user/create','viewuserscontroller@store')->name('user.store');
 Route::get('/show/users/{role}','viewuserscontroller@index')->name('users');
+
+
+// profile routes
+Route::get('/changepassword','viewuserscontroller@ChangeForm')->name('profile.change.form');
+Route::put('/ChangePassword','viewuserscontroller@ChangePassword')->name('password.change');

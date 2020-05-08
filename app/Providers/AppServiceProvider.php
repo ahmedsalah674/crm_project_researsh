@@ -42,7 +42,11 @@ class AppServiceProvider extends ServiceProvider
                 'icon' => 'fas fa-user fa-lg mr-1 my-2',
               
             ],
-           
+            [
+              'text' => 'change password',
+              'url'  => route('profile.change.form'),
+              'icon' => 'fas fa-fw fa-lock my-2',
+            ],
             ); //end event -> add
             if(\Auth::check()){
                 if(\Auth::user()->role == 0)

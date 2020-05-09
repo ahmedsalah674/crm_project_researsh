@@ -34,3 +34,4 @@ Route::put('/ChangePassword','viewuserscontroller@ChangePassword')->name('passwo
 Route::get('/complain/create','ComplainController@create')->name('complain.create');
 Route::post('/complain/store','ComplainController@store')->name('complain.store');
 Route::get('complain/all/{state}','ComplainController@index')->name('complain.all');
+Route::post('complain/show','complaincontroller@show')->name('complain.details');

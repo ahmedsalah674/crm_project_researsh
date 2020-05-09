@@ -15,4 +15,8 @@ class Complain extends Model
       {
         return asset('images/complains/'.$value);
       }
+      public function customer()
+        { 
+            return $this->belongsTo('App\User', 'customer_id');
+        }
 }

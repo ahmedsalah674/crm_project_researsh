@@ -53,4 +53,19 @@ class ComplainController extends Controller
           abort(404);
         
       }
+      public function show(Request $request)
+    {
+      $complain= Complain::find($request->ComplainId);
+      if(\Auth::user()->role!=0 && $complain->customer->id!=\Auth::user()->id )
+        return redirect()->route('home')->with('error',"You Cann't Open This Page");
+      
+      
+      $user=Complain::find($request->ComplainId)->customer;
+     
+        if(!$complain)
+        abort(404);
+      else
+        return view('complain.details',compact('complain','user'));
+        
+    }
 }

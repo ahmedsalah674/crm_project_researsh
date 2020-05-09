@@ -41,4 +41,9 @@ class User extends Authenticatable
         {
           return asset('images/users/'.$value);
         }
+     public function CustomerComplains()
+    {
+        return $this->hasMany('App\complain','customer_id');
+    }
+    
 }
